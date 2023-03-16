@@ -1,0 +1,65 @@
+<div class="container">
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    data-bs-whatever="@getbootstrap"
+  >
+    Open modal for @getbootstrap
+  </button>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form #billForm="ngForm" (ngSubmit)="saveDetail(billForm.value)">
+          <div class="form-group">
+            <label class="form-label">Sr No</label>
+            <input
+              type="number"
+              required
+              #srno="ngModel"
+              name="srno"
+              placeholder="Enter SrNo"
+              class="form-control"
+              ngModel
+            />
+            <span *ngIf="srno.invalid && srno.touched" class="form-text error"
+              >Please Enter Serial Number</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Particular</label>
+            <input
+              type="text"
+              required
+              #particular="ngModel"
+              name="particular"
+              placeholder="Enter Particular Detail"
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="particular.invalid && particular.touched"
+              class="form-text error"
+              >Please Enter Particular Detail</span
+            >
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary">
+              Save Particular
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
