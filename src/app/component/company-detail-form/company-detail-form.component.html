@@ -1,0 +1,133 @@
+<div id="exampleModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <span class="modal-header">Enter Detail's of Company</span>
+      <div class="modal-body">
+        <form #billForm="ngForm" (ngSubmit)="saveDetail(billForm.value)">
+          <div class="form-group">
+            <label class="form-label">Company's Name</label>
+            <input
+              type="text"
+              required
+              #companyName="ngModel"
+              name="companyName"
+              placeholder="Enter Company's Name"
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="companyName.invalid && companyName.touched"
+              class="form-text error"
+              >Please Enter Company's Name</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Address Line 1</label>
+            <input
+              type="text"
+              required
+              #addLine1="ngModel"
+              name="addLine1"
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="addLine1.invalid && addLine1.touched"
+              class="form-text error"
+              >Please Enter Address</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Address Line 2</label>
+            <input
+              type="text"
+              required
+              #addLine2="ngModel"
+              name="addLine2"
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="addLine2.invalid && addLine2.touched"
+              class="form-text error"
+              >Please Enter Address</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">City Name</label>
+            <input
+              type="text"
+              required
+              #cityName="ngModel"
+              name="cityName"
+              placeholder="Eg. Mumbai etc."
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="cityName.invalid && cityName.touched"
+              class="form-text error"
+              >Please Enter City's Name</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">State Name</label>
+            <input
+              type="text"
+              required
+              #stateName="ngModel"
+              name="stateName"
+              placeholder="Eg. Maharashtra etc."
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="stateName.invalid && stateName.touched"
+              class="form-text error"
+              >Please Enter State's Name</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">Postal Code</label>
+            <input
+              type="number"
+              required
+              #postalName="ngModel"
+              name="postalName"
+              placeholder="Eg. 400055 etc."
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="postalName.invalid && postalName.touched"
+              class="form-text error"
+              >Please Enter Postal Code</span
+            >
+          </div>
+          <div class="form-group">
+            <label class="form-label">GSTIN/UIN</label>
+            <input
+              type="text"
+              required
+              #gstinCode="ngModel"
+              name="gstinCode"
+              placeholder="Eg. 27XXXXXXXXXXXZK etc."
+              class="form-control"
+              ngModel
+            />
+            <span
+              *ngIf="gstinCode.invalid && gstinCode.touched"
+              class="form-text error"
+              >Please Enter GSTIN/UIN Number</span
+            >
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-secondary">
+              Create Profile
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

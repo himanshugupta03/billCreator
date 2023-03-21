@@ -1,0 +1,8 @@
+<div class="container">
+  <button class="btn btn-secondary" (click)="open()">ADD</button>
+  <app-invoice-data-table id="print-section"></app-invoice-data-table>
+
+  <button printSectionId="print-section" printTitle="Bill for MSC" ngxPrint>
+    print
+  </button>
+</div>
